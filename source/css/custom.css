@@ -1,0 +1,45 @@
+#page-header {
+    position: relative;
+    background-color: transparent !important;
+    transition: all 0.2s ease !important;
+}
+
+#page-header::before{
+    /* 创建覆盖层：模糊效果 */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    background-image: url(/images/Banner.png);
+    background-size: cover;
+    background-position: center;
+    transition: all 0.2s ease !important;
+    z-index: -2;
+}
+
+
+#page-header::after { 
+    /* 创建覆盖层：纯色滤镜 */
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(42, 121, 212, 0.3);
+    z-index: -1;
+    transition: background-color 0.2s ease;
+}
+
+
+#page-header.blur-banner::after {
+    /* 在page-header处于“blur-banner”下，改变after的属性（变不透明） */
+    background-color: rgba(88, 146, 228, 0.3);
+}
+
+#page-header.blur-banner::before{
+    /* 在page-header处于“blur-banner”下，改变before的属性（应用滤镜）*/
+    filter: blur(20px);
+}
