@@ -45,5 +45,6 @@
 }
 
 .site-icon{
+    content: " ";
     background-image: url(/images/Banner.png) !important;
 }
