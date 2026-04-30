@@ -43,3 +43,7 @@
     /* 在page-header处于“blur-banner”下，改变before的属性（应用滤镜）*/
     filter: blur(20px);
 }
+
+.site-icon{
+    src: url(/images/HOME.png) !important;
+}
